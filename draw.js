@@ -10,8 +10,8 @@ var snek;
 
 (function setup()
 {
-    snek = new Snek();
     fruit = new fruit();
+    snek = new Snek();
     
     fruit.randomLoc();
 
@@ -36,7 +36,6 @@ var snek;
 window.addEventListener('keydown', ((evt) => {
     const direction = evt.key.replace('Arrow', '');
     snek.changeDirection(direction);
-    console.log(direction);
 }))
 
 
