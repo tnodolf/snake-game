@@ -1,13 +1,20 @@
 function Snek() 
 {
-    this.x = 0;
-    this.y = canvas.height/2;
+    this.reset = function()
+    {
+        this.x = 0;
+        this.y = canvas.height/2;
 
-    this.xspeed = scale;
-    this.yspeed = 0;
+        this.xspeed = scale;
+        this.yspeed = 0;
 
-    this.total = 0;
-    this.tail = [];
+        this.total = 0;
+        fruit.randomLoc();
+
+        this.tail = [];
+    }
+
+    this.reset();
 
     this.draw = function() 
     {
@@ -82,19 +89,5 @@ function Snek()
                 this.reset();
             }
         }
-    }
-
-    this.reset = function()
-    {
-        this.x = 0;
-        this.y = 300;
-
-        this.xspeed = scale;
-        this.yspeed = 0;
-
-        this.total = 0;
-        fruit.randomLoc();
-
-        this.tail = [];
     }
 }
